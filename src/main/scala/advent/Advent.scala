@@ -2,6 +2,8 @@ package advent
 
 import day0.Day0Entry
 
+import scala.io.StdIn.readLine
+
 object Advent {
   val day = 0
 
@@ -16,10 +18,12 @@ object Advent {
 
   def main(args: Array[String]): Unit = {
     println(motd(day));
-    val input = "inputs/day0.txt"
+    //val input = "inputs/day0.txt"
     val className = "advent.day0.Day%dEntry".format(day)
     //val entry = Class.forName(className).newInstance.asInstanceOf[DayEntry]
-    val entry = DayEntry(0)
+    val dayIn = readLine("What day am I?")
+    val input = s"inputs/day${dayIn}.txt"
+    val entry = DayEntry(dayIn.toInt)
     println(entry.enter(input))
   }
 }

@@ -1,8 +1,9 @@
 package advent
 
 import scala.language.reflectiveCalls
+import org.apache.logging.log4j.scala.Logging
 
-trait DayEntry {
+trait DayEntry extends Logging {
   def processInput(lines: Iterator[String]): String
 
   def enter(input: String): String = {

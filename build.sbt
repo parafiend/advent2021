@@ -8,7 +8,10 @@ ThisBuild / organizationName := "parafiend"
 lazy val root = (project in file("."))
   .settings(
     name := "advent2021",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies += scalaTest % Test,
+    libraryDependencies += "org.apache.logging.log4j" %% "log4j-api-scala" % "12.0",
+    libraryDependencies += "org.apache.logging.log4j" % "log4j-api" % "2.13.2",
+    libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.13.2"
   )
 
 // Uncomment the following for publishing to Sonatype.
