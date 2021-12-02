@@ -7,6 +7,7 @@ trait DayEntry extends Logging {
   def processInput(lines: Iterator[String]): String
 
   def enter(input: String): String = {
+    logger.error("Hi??")
     applyToInput(input, processInput)
   }
 
