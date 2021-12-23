@@ -23,7 +23,8 @@ object Advent {
     //val entry = Class.forName(className).newInstance.asInstanceOf[DayEntry]
     val dayIn = readLine("What day am I?")
     val input = s"inputs/day${dayIn}.txt"
-    val entry = DayEntry(dayIn.toInt)
+    val dayNum = dayIn.filter(c => c.isDigit).toInt
+    val entry = DayEntry(dayNum)
     println(entry.enter(input))
   }
 }
